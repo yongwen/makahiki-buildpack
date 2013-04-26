@@ -14,7 +14,7 @@ echo "-----> install makahiki depenencies"
 cd .heroku
 
 # Download and extract makahiki into default directory.
-curl -s -L -o makahiki-dep.tar.gz VENDORED_MAKAHIKI
+curl -s -L -o makahiki-dep.tar.gz $VENDORED_MAKAHIKI
 tar -zxvf makahiki-dep.tar.gz > /dev/null
 rm makahiki-dep.tar.gz
 
