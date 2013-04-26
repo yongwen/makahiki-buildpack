@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# This script install the makahiki dependency
+#
+# This script is invoked by [`bin/compile`](/).
+
+# The location of the pre-compiled libmemcached binary.
+VENDORED_MAKAHIKI="http://makahiki-yxu.s3.amazonaws.com/python.tgz"
+
+# Syntax sugar.
+source $BIN_DIR/utils
+
+echo "-----> install makahiki depenencies"
+cd .heroku
+
+# Download and extract makahiki into default directory.
+curl -s -L -o makahiki-dep.tar.gz VENDORED_MAKAHIKI
+tar -zxvf makahiki-dep.tar.gz > /dev/null
+rm makahiki-dep.tar.gz
+
+cd ..
+
+
+
