@@ -19,5 +19,6 @@ cat <<EOF
 
 addons:
   heroku-postgresql:dev
+  memcache
 EOF
 fi
