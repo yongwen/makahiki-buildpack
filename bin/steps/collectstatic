@@ -19,14 +19,6 @@ if [ ! "$DISABLE_COLLECTSTATIC" ]; then
     # Check if collectstatic is configured properly.
     python $MANAGE_FILE collectstatic --dry-run --noinput &> /dev/null && RUN_COLLECTSTATIC=true
 
-    echo "-----> set up makahiki instance"
-    env
-
-    python $MANAGE_FILE syncdb --noinput --migrate --verbosity 0
-    python $MANAGE_FILE setup_test_data rounds 1
-    python $MANAGE_FILE loaddata -v 0 makahiki/fixtures/default_all.json
-    python $MANAGE_FILE setup_test_data all 2
-
     # Compile assets if collectstatic appears to be kosher.
     if [ "$RUN_COLLECTSTATIC" ]; then
 
