@@ -160,7 +160,7 @@ if (grep -Fiq "hg+" requirements.txt) then
 fi
 
 # Makahiki support.
-source $BIN_DIR/steps/makahiki
+#source $BIN_DIR/steps/makahiki
 
 # Install dependencies with Pip.
 puts-step "Installing dependencies using Pip ($PIP_VERSION)"
