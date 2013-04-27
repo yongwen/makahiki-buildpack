@@ -16,7 +16,3 @@ python makahiki/manage.py setup_test_data rounds 1
 python makahiki/manage.py loaddata -v 0 makahiki/fixtures/default_all.json
 python makahiki/manage.py setup_test_data all 2
 
-cd ..
-
-
-
