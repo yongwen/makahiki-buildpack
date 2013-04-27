@@ -9,7 +9,6 @@ source $BIN_DIR/utils
 
 echo "-----> set up makahiki instance"
 
-fixture = "default_all.json"
 python makahiki/manage.py syncdb --noinput --migrate --verbosity 0
 
 python makahiki/manage.py setup_test_data rounds 1

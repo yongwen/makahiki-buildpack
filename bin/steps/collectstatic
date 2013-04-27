@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+echo "-----> set up makahiki instance"
+
+python makahiki/manage.py syncdb --noinput --migrate --verbosity 0
+
+python makahiki/manage.py setup_test_data rounds 1
+python makahiki/manage.py loaddata -v 0 makahiki/fixtures/default_all.json
+python makahiki/manage.py setup_test_data all 2
+
 # Syntax sugar.
 indent() {
   RE="s/^/       /"
