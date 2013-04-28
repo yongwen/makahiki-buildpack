@@ -12,13 +12,13 @@ VENDORED_MAKAHIKI="https://github.com/yongwen/makahiki-min/archive/master.zip"
 source $BIN_DIR/utils
 
 echo "-----> install makahiki depenencies"
-#cd .heroku
-
 # Download and extract makahiki into default directory.
 curl -s -L -o makahiki-dep.tar.gz $VENDORED_MAKAHIKI_DEP
 tar -zxvf makahiki-dep.tar.gz > /dev/null
+rm -f makahiki-dep.tar.gz
 
-#cd ..
-
-#curl -s -L -o makahiki.tar.gz $VENDORED_MAKAHIKI
-#tar -zxvf makahiki.tar.gz > /dev/null
+cd /tmp
+curl -s -L -o makahiki.tar.gz $VENDORED_MAKAHIKI
+tar -zxvf makahiki.tar.gz > /dev/null
+mv makahiki-min-master/* /app
+cd /app
