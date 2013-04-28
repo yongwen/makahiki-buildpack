@@ -5,7 +5,7 @@
 # This script is invoked by [`bin/compile`](/).
 
 # The location of the pre-compiled libmemcached binary.
-VENDORED_MAKAHIKI_DEP="http://makahiki-yxu.s3.amazonaws.com/python.tgz"
+VENDORED_MAKAHIKI_DEP="http://makahiki-yxu.s3.amazonaws.com/makahiki-dep.tgz"
 VENDORED_MAKAHIKI="https://github.com/yongwen/makahiki-min/archive/master.zip"
 
 # Syntax sugar.
