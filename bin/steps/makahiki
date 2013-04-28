@@ -13,12 +13,13 @@ source $BIN_DIR/utils
 
 echo "-----> install makahiki depenencies"
 # Download and extract makahiki into default directory.
-curl -s -L -o makahiki-dep.tar.gz $VENDORED_MAKAHIKI_DEP
-tar -zxvf makahiki-dep.tar.gz > /dev/null
-rm -f makahiki-dep.tar.gz
-
 cd /tmp
 curl -s -L -o makahiki.tar.gz $VENDORED_MAKAHIKI
 tar -zxvf makahiki.tar.gz > /dev/null
+rm -f makahiki.tar.gz
 mv makahiki-min-master/* /app
 cd /app
+
+curl -s -L -o makahiki-dep.tar.gz $VENDORED_MAKAHIKI_DEP
+tar -zxvf makahiki-dep.tar.gz > /dev/null
+rm -f makahiki-dep.tar.gz
