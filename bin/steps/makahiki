@@ -6,20 +6,12 @@
 
 # The location of the pre-compiled libmemcached binary.
 VENDORED_MAKAHIKI_DEP="http://makahiki-yxu.s3.amazonaws.com/makahiki-dep.tgz"
-VENDORED_MAKAHIKI="https://github.com/yongwen/makahiki-min/archive/master.zip"
 
 # Syntax sugar.
 source $BIN_DIR/utils
 
 echo "-----> install makahiki depenencies"
 # Download and extract makahiki into default directory.
-cd /tmp
-curl -s -L -o makahiki.tar.gz $VENDORED_MAKAHIKI
-tar -zxvf makahiki.tar.gz > /dev/null
-rm -f makahiki.tar.gz
-mv makahiki-min-master/* /app
-cd /app
-
 curl -s -L -o makahiki-dep.tar.gz $VENDORED_MAKAHIKI_DEP
 tar -zxvf makahiki-dep.tar.gz > /dev/null
 rm -f makahiki-dep.tar.gz
